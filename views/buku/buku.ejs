@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Buku | Buku.gan</title>
+  </head>
+
+  <body>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+
+    <nav>
+      <a href="/tambahbuku">Tambah Buku</a>
+      <a href="/listbuku">Daftar Buku</a>
+      <a href="/logout">Logout</a>
+    </nav>
+    <div>
+      <div>
+        <center>
+          <br />
+          <h1>Buku</h1>
+          <br />
+          <table>
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama Buku</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Inti Sari</th>
+                <th>OPSI</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% buku.forEach((buku) => { %>
+              <tr>
+                <td><%= buku.id_buku %></td>
+                <td><%= buku.nama_buku %></td>
+                <td><%= buku.pengarang %></td>
+                <td><%= buku.penerbit %></td>
+                <td><%= buku.inti %></td>
+
+                <td>
+                  <a href="/perbarui">Perbarui!</a>
+
+                  <form method="POST" action="hapus_gan">
+                    <a href="/hapus/<%= buku.id_buku %>">Hapus!</a>
+                  </form>
+                </td>
+              </tr>
+
+              <%})%>
+            </tbody>
+          </table>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

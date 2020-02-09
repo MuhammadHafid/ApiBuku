@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Tambah Buku | Buku.gan</title>
+  </head>
+
+  <body>
+    <a href="/tambahbuku">Tambah Buku</a>
+    <a href="/listbuku">Daftar Buku</a>
+    <a href="/logout">Logout</a>
+
+    <div>
+      <center>
+        <form method="POST" action="bukuu">
+          <br />
+          <h2>Penambahan Buku</h2>
+          <p></p>
+          <br />
+          <div>
+            <div>
+              <label for="nama">Nama Buku</label><br />
+              <input
+                type="text"
+                name="nama_buku"
+                placeholder="Nama buku"
+                required
+              /><br /><br />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="pengarang">Pengarang</label><br />
+              <input
+                type="text"
+                name="pengarang"
+                placeholder="Pengarang buku"
+                required
+              /><br /><br />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="penerbit">Penerbit</label><br />
+              <input
+                type="text"
+                name="penerbit"
+                placeholder="Penerbit buku"
+                required
+              /><br /><br />
+            </div>
+          </div>
+          <div>
+            <div>
+              <label for="inti">Inti</label><br />
+              <textarea
+                name="inti"
+                cols="30"
+                rows="10"
+                required
+                placeholder="Inti sari buku"
+              ></textarea
+              ><br />
+            </div>
+          </div>
+          <br />
+          <input type="submit" tabindex="0" value="Tambahkan!" />
+        </form>
+        <br />
+      </center>
+    </div>
+  </body>
+</html>
